@@ -31,7 +31,7 @@ window#waybar {
 }
 
 tooltip {
-    background: @tool-bg;
+    background: #242424;
     color: @tool-color;
     border-radius: 22px;
     border-width: 2px;
@@ -57,8 +57,8 @@ tooltip {
     background: #DA025D;
     color: #DDBF98;
     margin-left: 3px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-right: 3px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);

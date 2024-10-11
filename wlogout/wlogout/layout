@@ -6,7 +6,7 @@
 }
 {
     "label" : "logout",
-    "action" : "killall -9 Hyprland && sddm",
+    "action" : "killall -9 Hyprland",
     "text" : "Exit",
     "keybind" : "e"
 }
