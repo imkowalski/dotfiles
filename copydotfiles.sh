@@ -17,5 +17,13 @@ cp -r ~/.zshrc ./
 echo "Adding the files to git"
 git add .
 read -p "Commit message:" msg
-echo "Commiting to the repo with the message $msg"
+echo "Commiting to the repo with the message: $msg"
 git commit -m "$msg"
+read -p "Push To origin (y/n)?>" choice
+case "$choice" in 
+  y|Y ) git push origin;;
+  n|N ) echo "bye";;
+  * ) echo "wasn't an option";;
+esac
+
+
