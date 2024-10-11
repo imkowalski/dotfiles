@@ -1,0 +1,139 @@
+{
+// sourced from header module //
+
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "height": 32,
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+
+
+	"modules-left": ["custom/left","pulseaudio","battery","custom/right"],
+	"modules-center": ["custom/left","hyprland/workspaces","custom/right"],
+	"modules-right": ["custom/left","tray","network","custom/exit","clock","custom/right"],
+
+ 
+"network": {
+        "format": "{ifname}",
+        "format-wifi": " ",
+        "format-ethernet": "",
+        "format-disconnected": "Not connected", //An empty format will hide the module.
+        "tooltip-format": " {ifname} via {gwaddri}",
+        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "alacritty -e nmtui"
+    },
+
+  
+	"custom/exit": {
+	        "format": "",
+	        "tooltip-format": "Powermenu",
+	        "on-click": "wlogout -b 4",
+	        "tooltip": false
+		},
+
+     "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    // "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C ",
+    "format": "{temperatureC}°C "
+    },
+
+     "custom/rofi": {
+        "format": "  {}",
+        "on-click": "~/.config/hypr/scripts/Rofi-launcher.sh"
+	},
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{capacity}% {icon} ",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+ 
+    "pulseaudio": {
+        "format": "{volume} {icon}",
+        "format-muted": "婢",
+        "on-click": "pavucontrol -t 3",
+        "on-click-middle": "~/.config/hypr/scripts/volumecontrol.sh -o m",
+        "on-scroll-up": "~/.config/hypr/scripts/volumecontrol.sh -o i",
+        "on-scroll-down": "~/.config/hypr/scripts/volumecontrol.sh -o d",
+        "tooltip-format": "{icon} {desc} // {volume}%",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+   }
+    },
+
+
+    "tray": {
+      "icon-size": 20,
+        "spacing": 9
+    },
+
+
+  "clock": {
+        "format": "{:%H:%M}",
+        "on-click": "~/.config/eww/scripts/toggle_control_center.sh"
+      },
+
+
+   "backlight": {
+    "device": "intel_backlight",
+    "on-scroll-up": "light -A 7",
+    "on-scroll-down": "light -U 7",
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "",
+      "",
+      "",
+      ""
+    ]
+    },
+
+
+// modules for padding //
+
+    "custom/left": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+    "custom/right": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    },
+
+}
