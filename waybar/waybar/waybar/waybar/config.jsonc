@@ -10,10 +10,9 @@
     "gtk-layer-shell": true,
 
 
-	"modules-left": ["custom/left","hyprland/workspaces","custom/right"],
-	"modules-center": ["hyprland/window"],
-	"modules-right": ["custom/left","tray","pulseaudio","battery","network","custom/exit","clock","custom/right"],
-
+	"modules-left": ["custom/left","pulseaudio","battery","custom/right"],
+	"modules-center": ["custom/left","hyprland/workspaces","custom/right"],
+	"modules-right": ["custom/left","tray","network","custom/exit","clock","custom/right"],
 
  
 "network": {

@@ -3,12 +3,13 @@
     border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
     min-height: 10px;
 }
 
 window#waybar {
-    background-color: rgba(20,20,20,0.8);
+	background: #242424;
+    background-color: #242424;
 }
 
 #battery,
@@ -24,13 +25,14 @@ window#waybar {
 #custom-right,
 #custom-left {
    color: @main-color;
+   background: #242424;
    margin: 4px 0px 4px 0px;
    opacity: 1;
    border: 0px solid #181825;
 }
 
 tooltip {
-    background: #242424;
+    background: @tool-bg;
     color: @tool-color;
     border-radius: 22px;
     border-width: 2px;
@@ -52,17 +54,12 @@ tooltip {
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
-#window {
-	color: #fafafa;
-}
-
-
 #workspaces button.active {
     background: #DA025D;
     color: #DDBF98;
     margin-left: 3px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
     margin-right: 3px;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
@@ -106,31 +103,30 @@ tooltip {
 #pulseaudio {
     color: #EA879D;
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 19px;
 }
 
 #battery {
     color: #458588;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 #custom-exit {
-	padding-left:5px;
-	padding-right:5px;
+	padding-right:19px;
 }
 #tray {
   padding-left: 0px;
-  padding-right: 5px;
+  padding-right: 19px;
 }
 
 #network {
    padding-left: 0px;
-   padding-right: 5px;
+   padding-right: 19px;
 }
 
 #clock {
    color: #73B580;
-   padding-left: 10px;
+   padding-left: 0px;
    padding-right: 0px;
 }
 

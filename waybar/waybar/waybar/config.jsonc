@@ -11,9 +11,7 @@
 
 
 	"modules-left": ["custom/left","hyprland/workspaces","custom/right"],
-	"modules-center": ["hyprland/window"],
-	"modules-right": ["custom/left","tray","pulseaudio","battery","network","custom/exit","clock","custom/right"],
-
+	"modules-right": ["custom/left","pulseaudio","battery","tray","network","custom/exit","clock","custom/right"],
 
  
 "network": {

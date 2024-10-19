@@ -3,12 +3,12 @@
     border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
     min-height: 10px;
 }
 
 window#waybar {
-    background-color: rgba(20,20,20,0.8);
+    background-color: rgba(0, 0, 0, .0);
 }
 
 #battery,
@@ -24,6 +24,7 @@ window#waybar {
 #custom-right,
 #custom-left {
    color: @main-color;
+   background: #242424;
    margin: 4px 0px 4px 0px;
    opacity: 1;
    border: 0px solid #181825;
@@ -51,11 +52,6 @@ tooltip {
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
-
-#window {
-	color: #fafafa;
-}
-
 
 #workspaces button.active {
     background: #DA025D;
@@ -106,31 +102,30 @@ tooltip {
 #pulseaudio {
     color: #EA879D;
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 19px;
 }
 
 #battery {
     color: #458588;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 #custom-exit {
-	padding-left:5px;
-	padding-right:5px;
+	padding-right:19px;
 }
 #tray {
   padding-left: 0px;
-  padding-right: 5px;
+  padding-right: 19px;
 }
 
 #network {
    padding-left: 0px;
-   padding-right: 5px;
+   padding-right: 19px;
 }
 
 #clock {
    color: #73B580;
-   padding-left: 10px;
+   padding-left: 0px;
    padding-right: 0px;
 }
 
